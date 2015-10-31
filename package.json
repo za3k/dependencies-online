@@ -1,0 +1,11 @@
+{
+  "name": "dependencies-online",
+  "version": "1.0.0",
+  "description": "Resolve a dependency graph asynchronously",
+  "main": "dependencies-online.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zachary Vance",
+  "license": "CC0-1.0"
+}
