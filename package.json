@@ -1,11 +1,24 @@
 {
   "name": "dependencies-online",
-  "version": "1.0.0",
   "description": "Resolve a dependency graph asynchronously",
-  "main": "dependencies-online.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "1.0.0",
   "author": "Zachary Vance",
-  "license": "CC0-1.0"
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "bugs": {
+    "url": "https://github.com/vanceza/dependencies-online/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanceza/dependencies-online"
+  },
+  "license": "CC0-1.0",
+  "main": "lib/dependencies-online.js",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "chai-as-promised": "^5.1.0",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.2"
+  }
 }
