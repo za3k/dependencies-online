@@ -25,30 +25,30 @@ Nodes in the graph are strings with the `name` of the module
 Examples
 ---
 
-        var DependencyGraph = require('dependencies-online')
-        
-        var graph = new DependencyGraph()
-        graph.add('a')
-        graph.add('b', ['a']).then(function() {
-            console.log("resolving module B immediately");
-            graph.resolve('b');
-            return 'module b';
-        });
-        graph.add('c', ['b'], function() {
-            return new Promise(function(resolve, reject) { 
-                console.log("resolving module C immediately in a 'resolver' promise");
-                resolve('module c');
-            });
-        });
-        graph.add('d');
+    var DependencyGraph = require('dependencies-online')
     
-        graph.has('a'); // True
-        graph.has('zzz'); // False
-        graph.isResolved('c'); // False
-    
-        graph.resolve('a', true, 'module a'); // Prints: resolving module B immediately
-                                              //         resolving module C immediately in a 'resolver' promise
-        graph.isResolved('a'); // True
-        graph.isResolved('b'); // True
-        graph.isResolved('c'); // True
-        graph.isResolved('d'); // False
+    var graph = new DependencyGraph()
+    graph.add('a')
+    graph.add('b', ['a']).then(function() {
+        console.log("resolving module B immediately");
+        graph.resolve('b');
+        return 'module b';
+    });
+    graph.add('c', ['b'], function() {
+        return new Promise(function(resolve, reject) { 
+            console.log("resolving module C immediately in a 'resolver' promise");
+            resolve('module c');
+        });
+    });
+    graph.add('d');
+
+    graph.has('a'); // True
+    graph.has('zzz'); // False
+    graph.isResolved('c'); // False
+
+    graph.resolve('a', true, 'module a'); // Prints: resolving module B immediately
+                                          //         resolving module C immediately in a 'resolver' promise
+    graph.isResolved('a'); // True
+    graph.isResolved('b'); // True
+    graph.isResolved('c'); // True
+    graph.isResolved('d'); // False
