@@ -46,9 +46,10 @@ Examples
     graph.has('zzz'); // False
     graph.isResolved('c'); // False
 
-    graph.resolve('a', true, 'module a'); // Prints: resolving module B immediately
-                                          //         resolving module C immediately in a 'resolver' promise
-    graph.isResolved('a'); // True
-    graph.isResolved('b'); // True
-    graph.isResolved('c'); // True
-    graph.isResolved('d'); // False
+    graph.resolve('a', true, 'module a');
+    // Prints: resolving module B immediately
+    //         resolving module C immediately in a 'resolver' promise
+    graph.isResolved('a'); // True promise
+    graph.isResolved('b'); // True promise
+    graph.isResolved('c'); // True promise
+    graph.isResolved('d'); // Unresolved promise
