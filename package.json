@@ -3,6 +3,7 @@
   "description": "Resolve a dependency graph asynchronously",
   "version": "1.0.0",
   "author": "Zachary Vance",
+  "homepage": "https://github.com/vanceza/dependencies-online",
   "scripts": {
     "test": "node_modules/.bin/mocha"
   },
